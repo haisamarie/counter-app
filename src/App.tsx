@@ -1,12 +1,12 @@
 import { Layout } from "./components/Layout";
-import { List } from "./components/List";
+import { ButtonList } from "./components/ButtonList";
 import { SelectNumber } from "./components/SelectNumber";
 
 function App() {
   return (
     <>
       <Layout>
-        <List />
+        <ButtonList />
         <SelectNumber />
       </Layout>
     </>

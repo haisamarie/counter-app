@@ -4,7 +4,7 @@ import { Text } from "../Text";
 
 import { useCount } from "../../hooks/useCount";
 
-export const List = () => {
+export const ButtonList = () => {
   const {
     onClickCountUp,
     onClickCountDown,
