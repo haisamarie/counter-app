@@ -2,23 +2,26 @@ import styles from "./index.module.css";
 import { Button } from "../Button";
 import { Text } from "../Text";
 
-import { useCount } from "../../hooks/useCount";
-
 type Props = {
   upperLimit?: number;
+  count?: number;
+  isUpDisabled?: boolean;
+  isDownDisabled?: boolean;
+  isClearDisabled?: boolean;
+  onClickCountUp: () => void;
+  onClickCountDown: () => void;
+  onClickClear: () => void;
 };
 
-export const ButtonList = ({ upperLimit }: Props) => {
-  const {
-    onClickCountUp,
-    onClickCountDown,
-    onClickClear,
-    isDownDisabled,
-    isClearDisabled,
-    isUpDisabled,
-    count,
-  } = useCount({ upperLimit: upperLimit ?? 0 });
-
+export const ButtonList = ({
+  count,
+  isUpDisabled,
+  isClearDisabled,
+  onClickCountDown,
+  onClickCountUp,
+  isDownDisabled,
+  onClickClear,
+}: Props) => {
   return (
     <>
       <Text>{count}</Text>
