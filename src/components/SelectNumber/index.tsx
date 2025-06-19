@@ -1,16 +1,12 @@
 import styles from "./index.module.css";
-import { useState, type ChangeEvent } from "react";
-export const SelectNumber = () => {
-  const [upperLimit, setUpperLimit] = useState<number>(0);
+import { type ChangeEvent } from "react";
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = Number(e.target.value);
-    setUpperLimit(value);
-  };
-
+type Props = {
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+};
+export const SelectNumber = ({ handleChange }: Props) => {
   return (
     <div className={styles["wrap"]}>
-      {upperLimit}
       <p className={styles["text"]}>カウンターの上限設定</p>
       <input
         onChange={handleChange}

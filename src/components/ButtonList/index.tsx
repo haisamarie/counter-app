@@ -4,21 +4,26 @@ import { Text } from "../Text";
 
 import { useCount } from "../../hooks/useCount";
 
-export const ButtonList = () => {
+type Props = {
+  upperLimit?: number;
+};
+
+export const ButtonList = ({ upperLimit }: Props) => {
   const {
     onClickCountUp,
     onClickCountDown,
     onClickClear,
     isDownDisabled,
     isClearDisabled,
+    isUpDisabled,
     count,
-  } = useCount();
+  } = useCount({ upperLimit: upperLimit ?? 0 });
 
   return (
     <>
       <Text>{count}</Text>
       <div className={styles["list"]}>
-        <Button onClick={onClickCountUp} label="UP" />
+        <Button disabled={isUpDisabled} onClick={onClickCountUp} label="UP" />
         <Button
           onClick={onClickCountDown}
           label="DOWN"
