@@ -17,13 +17,18 @@ function App() {
     setCount(0);
   };
 
+  const isDisabled = count <= 0 ? true : false;
   return (
     <>
       <Layout>
         <Text>{count}</Text>
         <List>
           <Button onClick={onClickCountUp} label="UP" />
-          <Button onClick={onClickCountDown} label="DOWN" />
+          <Button
+            onClick={onClickCountDown}
+            label="DOWN"
+            disabled={isDisabled}
+          />
           <Button onClick={onClickClear} label="CLEAR" />
         </List>
       </Layout>
