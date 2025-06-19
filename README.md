@@ -15,8 +15,6 @@
 | フレームワーク | React        |
 | 言語           | TypeScript   |
 | スタイル       | Tailwind CSS |
-| データ取得 -   |
-| テスト         | -            |
 | デプロイ       | Vercel       |
 
 ## 📁 ディレクトリ構成
