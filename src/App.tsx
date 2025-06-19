@@ -29,7 +29,7 @@ function App() {
             label="DOWN"
             disabled={isDisabled}
           />
-          <Button onClick={onClickClear} label="CLEAR" />
+          <Button disabled={isDisabled} onClick={onClickClear} label="CLEAR" />
         </List>
       </Layout>
     </>
