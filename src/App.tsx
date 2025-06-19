@@ -1,18 +1,21 @@
-import styles from "./App.module.css";
+import { Layout } from "./components/Layout";
+import { Button } from "./components/Button";
+import { Text } from "./components/Text";
+
+import styles from "./main.module.css";
+
 function App() {
   return (
     <>
-      <div>
-        <h2>カウンター</h2>
-        <p>
-          カウンターの値: <span>0</span>
-        </p>
-        <div>
-          <button>増やす</button>
-          <button>減らす</button>
-          <button>リセット</button>
+      <Layout>
+        <Text>0</Text>
+
+        <div className={styles["wrap"]}>
+          <Button label="UP" />
+          <Button label="DOWN" />
+          <Button label="CLEAR" />
         </div>
-      </div>
+      </Layout>
     </>
   );
 }
