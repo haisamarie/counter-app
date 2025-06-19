@@ -7,7 +7,6 @@ export const useCount = () => {
     setCount((prev) => prev + 1);
   };
   const onClickCountDown = () => {
-    setCount(count - 1);
     setCount((prev) => prev - 1);
   };
   const onClickClear = () => {
