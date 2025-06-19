@@ -1,8 +1,6 @@
 import styles from "./index.module.css";
-import { type ChangeEvent } from "react";
-
 type Props = {
-  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 export const SelectNumber = ({ handleChange }: Props) => {
   return (

@@ -1,15 +1,11 @@
 import { Layout } from "./components/Layout";
 import { ButtonList } from "./components/ButtonList";
 import { SelectNumber } from "./components/SelectNumber";
-import { type ChangeEvent, useState } from "react";
+import { useLimit } from "./hooks/useLimit";
 
 function App() {
-  const [upperLimit, setUpperLimit] = useState<number>(0);
+  const { handleChange, upperLimit } = useLimit();
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = Number(e.target.value);
-    setUpperLimit(value);
-  };
   return (
     <>
       <Layout>
