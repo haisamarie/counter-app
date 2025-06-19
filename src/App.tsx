@@ -2,22 +2,25 @@ import { Layout } from "./components/Layout";
 import { Button } from "./components/Button";
 import { Text } from "./components/Text";
 import { List } from "./components/List";
-
-const onClickCountUp = () => {
-  console.log("UP button clicked");
-};
-const onClickCountDown = () => {
-  console.log("Down button clicked");
-};
-const onClickClear = () => {
-  console.log("clear button clicked");
-};
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState<number>(0);
+
+  const onClickCountUp = () => {
+    setCount(count + 1);
+  };
+  const onClickCountDown = () => {
+    setCount(count - 1);
+  };
+  const onClickClear = () => {
+    setCount(0);
+  };
+
   return (
     <>
       <Layout>
-        <Text>0</Text>
+        <Text>{count}</Text>
         <List>
           <Button onClick={onClickCountUp} label="UP" />
           <Button onClick={onClickCountDown} label="DOWN" />
