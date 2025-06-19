@@ -12,7 +12,15 @@ export const useCount = () => {
   const onClickClear = () => {
     setCount(0);
   };
-  const isDisabled = useMemo(() => count <= 0, [count]);
+  const isDownDisabled = useMemo(() => count <= 0, [count]);
+  const isClearDisabled = useMemo(() => count <= 0, [count]);
 
-  return { onClickCountUp, onClickCountDown, onClickClear, count, isDisabled };
+  return {
+    onClickCountUp,
+    onClickCountDown,
+    onClickClear,
+    count,
+    isDownDisabled,
+    isClearDisabled,
+  };
 };
