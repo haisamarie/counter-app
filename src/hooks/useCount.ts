@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 export const useCount = () => {
   const [count, setCount] = useState<number>(0);
@@ -12,7 +12,7 @@ export const useCount = () => {
   const onClickClear = () => {
     setCount(0);
   };
-  const isDisabled = count <= 0 ? true : false;
+  const isDisabled = useMemo(() => count <= 0, [count]);
 
   return { onClickCountUp, onClickCountDown, onClickClear, count, isDisabled };
 };
