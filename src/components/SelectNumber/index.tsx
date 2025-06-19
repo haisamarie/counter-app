@@ -6,7 +6,7 @@ type Props = {
 export const SelectNumber = ({ handleChange, disabled }: Props) => {
   return (
     <div className={styles["wrap"]}>
-      <p className={styles["text"]}>カウンターの上限設定</p>
+      <p className={styles["text"]}>カウンターの上限</p>
       <input
         onChange={handleChange}
         className={styles["input"]}

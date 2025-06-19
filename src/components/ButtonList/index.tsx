@@ -4,7 +4,7 @@ import { Text } from "../Text";
 
 type Props = {
   upperLimit?: number;
-  count?: number;
+  count: number;
   isUpDisabled?: boolean;
   isDownDisabled?: boolean;
   isClearDisabled?: boolean;
