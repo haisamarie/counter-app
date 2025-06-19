@@ -1,7 +1,7 @@
 import { type ChangeEvent, useState } from "react";
 
 export const useLimit = () => {
-  const [upperLimit, setUpperLimit] = useState<number>(0);
+  const [upperLimit, setUpperLimit] = useState<number>(10);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value);

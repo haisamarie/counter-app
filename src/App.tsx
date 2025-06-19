@@ -28,7 +28,11 @@ function App() {
           onClickClear={onClickClear}
           count={count}
         />
-        <SelectNumber handleChange={handleChange} disabled={count > 0} />
+        <SelectNumber
+          upperLimit={upperLimit}
+          handleChange={handleChange}
+          disabled={count > 0}
+        />
       </Layout>
     </>
   );
