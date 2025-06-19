@@ -4,10 +4,11 @@ export const useCount = () => {
   const [count, setCount] = useState<number>(0);
 
   const onClickCountUp = () => {
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
   };
   const onClickCountDown = () => {
     setCount(count - 1);
+    setCount((prev) => prev - 1);
   };
   const onClickClear = () => {
     setCount(0);
